@@ -78,4 +78,10 @@ public class Rational {
 	return tempN;
     }
 
+    public void reduce() {
+	int gcd = gcd();
+	numer /= gcd;
+	denom /= gcd;
+    }
 }
+
