@@ -43,4 +43,12 @@ public class Rational {
 	denom *= factor.numer;
 	numer *= factor.denom;
     }
+    
+    public void add(Rational factor) {
+	numer *= factor.denom;
+	denom *= factor.denom;
+	factor.numer *= denom;
+	factor.numer *= denom;
+	numer += factor.numer;
+    }
     }
