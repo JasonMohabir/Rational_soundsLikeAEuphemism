@@ -45,10 +45,9 @@ public class Rational {
     }
     
     public void add(Rational factor) {
+	int temp = factor.numer * denom;
 	numer *= factor.denom;
 	denom *= factor.denom;
-	factor.numer *= denom;
-	factor.numer *= denom;
-	numer += factor.numer;
+	numer += temp;
     }
-    }
+}
