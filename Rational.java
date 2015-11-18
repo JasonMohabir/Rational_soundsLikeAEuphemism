@@ -1,3 +1,7 @@
+// Team soundsLikeAEuphemism -- Jason Mohabir, Shamaul Dilmohamed
+// APCS1 pd10
+// HW33 -- Do You Even Add, Bro?
+// 2015-11-18
 public class Rational {
    
     private int numer;
