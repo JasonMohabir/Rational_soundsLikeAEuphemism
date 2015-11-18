@@ -20,8 +20,8 @@ public class Rational {
 	    System.out.println("Invalid. Setting to 0/1");
 	}
 	else {
-	    numer=n;
-	    denom=d;
+	    numer = n;
+	    denom = d;
 	}
     }
 
@@ -31,19 +31,21 @@ public class Rational {
 
     // returns the most precise float version of the rational
     public double floatValue() {
-	return ((double)numer)/denom;
+	return ((double) numer) / denom; 
     }
-
+    // multiplies numerators and denominators
     public void multiply(Rational factor) {
 	numer *= factor.numer;
 	denom *= factor.denom;
     }
 
+    //multiplies fraction by reciprocal
     public void divide(Rational factor) {
 	denom *= factor.numer;
 	numer *= factor.denom;
     }
     
+    // changes denom to product of denoms, adds numerators after scaling
     public void add(Rational factor) {
 	int temp = factor.numer * denom;
 	numer *= factor.denom;
@@ -51,6 +53,7 @@ public class Rational {
 	numer += temp;
     }
 
+    // does same as above, except subtracting numerators
     public void subtract(Rational factor) {
 	int temp = factor.numer * denom;
 	numer *= factor.denom;
@@ -58,6 +61,9 @@ public class Rational {
 	numer -= temp;
     }
     
+    /* Euclid's algorithm, subtracts smaller of the two numbers until 
+    they equal each other, at which that is the gcd of the original
+    two values */
     public int gcd(){
 	int tempN = numer;
 	int tempD = denom;
@@ -78,6 +84,7 @@ public class Rational {
 	return tempN;
     }
 
+    // divides numer and denom by gcd
     public void reduce() {
 	int gcd = gcd();
 	numer /= gcd;
