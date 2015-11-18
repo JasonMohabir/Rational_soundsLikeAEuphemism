@@ -57,5 +57,25 @@ public class Rational {
 	denom *= factor.denom;
 	numer -= temp;
     }
+    
+    public int gcd(){
+	int tempN = numer;
+	int tempD = denom;
+	if (tempN == 0){
+	    return tempD;
+	}
+	if (tempD == 0){
+	    return tempN;
+	}
+	while (tempN != tempD){
+	    if (tempN > tempD){
+		tempN -= tempD;
+	    }
+	    else{
+		tempD -= tempN;
+	    }
+	}
+	return tempN;
+    }
 
 }

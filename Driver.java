@@ -4,6 +4,8 @@ public class Driver {
 	Rational r = new Rational (2,3);
 	Rational s = new Rational (1,2);
 	Rational t = new Rational (4,0);
+	Rational x = new Rational (0,2);
+	
 	System.out.println("Testing floatValue()");
 	System.out.println("s: " + s.floatValue());
 	System.out.println("r: " + r.floatValue());
@@ -52,5 +54,15 @@ public class Driver {
 	System.out.println("s:" + s );
 	System.out.println("r:" + r );
 
+	r = new Rational (2,6);
+	s = new Rational (3,10);
+	t = new Rational (6,9);
+	
+	
+	System.out.println("Testing gcd()");
+	r.gcd();
+	s.gcd();
+	t.gcd();
+	x.gcd();
     }
 }
