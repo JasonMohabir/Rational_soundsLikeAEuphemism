@@ -43,5 +43,14 @@ public class Driver {
 	System.out.println("s:" + s );
 	System.out.println("r:" + r );
 
+	r = new Rational (2,3);
+	s = new Rational (1,2);
+	t = new Rational (4,0);
+
+	System.out.println("Testing subtract()");
+	r.subtract(s);
+	System.out.println("s:" + s );
+	System.out.println("r:" + r );
+
     }
 }

@@ -50,4 +50,12 @@ public class Rational {
 	denom *= factor.denom;
 	numer += temp;
     }
+
+    public void subtract(Rational factor) {
+	int temp = factor.numer * denom;
+	numer *= factor.denom;
+	denom *= factor.denom;
+	numer -= temp;
+    }
+
 }
