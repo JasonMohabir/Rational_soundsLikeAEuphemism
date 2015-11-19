@@ -65,6 +65,7 @@ public class Rational {
     they equal each other, at which that is the gcd of the original
     two values */
     public int gcd(){
+
 	int tempN = numer;
 	int tempD = denom;
 	if (tempN == 0){
@@ -82,6 +83,7 @@ public class Rational {
 	    }
 	}
 	return tempN;
+
     }
 
     // divides numer and denom by gcd
@@ -90,5 +92,26 @@ public class Rational {
 	numer /= gcd;
 	denom /= gcd;
     }
+
+
+    public static int gcd(int a, int b){
+	if (a > b) {return gcd(b, a);} // Make the integers (smaller,larger)
+	if (b % a == 0) { // If larger/smaller is 0
+	    return a;     // Return smaller
+	}
+	return gcd(b % a, a); // Recursion: Euclidean Algorithm on (remainder, smaller)
+    }
+    
+
+    public int compareTo(Rational o){
+	double there = o.floatValue();
+	double here = floatValue();
+	if (here == there) {return 0;}
+	else if (there > here) {return -1;}
+	else return 1;
+	
+    }
+    
 }
+
 
